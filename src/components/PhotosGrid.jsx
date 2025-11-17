@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function PhotosGrid({ photos }) {
@@ -11,10 +10,9 @@ export default function PhotosGrid({ photos }) {
   return (
     <div className="grid gap-6 p-2 sm:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {photos.map((photo) => (
-        <Link to={`/photo/${photo.id}`}>
+        <Link to={`/photo/${photo.id}`} key={photo.id}>
           <div
             className="bg-white rounded-lg overflow-hidden shadow-sm flex flex-col"
-            key={photo.id}
           >
             <img
               className="w-full h-48 sm:h-40 md:h-44 object-cover"

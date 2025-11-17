@@ -7,7 +7,7 @@ function HomePage() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
-  const { photos, setPhotos } = useContext(PhotoContext);
+  const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
     let mounted = true;

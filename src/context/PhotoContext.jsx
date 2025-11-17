@@ -5,15 +5,7 @@ import { useState } from "react";
 export const PhotoContext = createContext();
 
 export function PhotoProvider({ children }) {
-  const [currentPhoto, setPhoto] = useState(null);
-  const [photos, setPhotos] = useState([])
-
-  const value = {
-    currentPhoto,
-    setPhoto,
-    photos,
-    setPhotos
-  };
+  const value = {};
 
   return (
     <PhotoContext.Provider value={value}>{children}</PhotoContext.Provider>
